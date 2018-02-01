@@ -1,0 +1,9 @@
+{
+  "server": {
+    "ip": "",
+    "port": 80
+  },
+  "facebook": {
+    "token": ""
+  }
+}
