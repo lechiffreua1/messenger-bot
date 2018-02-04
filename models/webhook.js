@@ -57,7 +57,6 @@ class Webhook extends EE {
     }
 
     const options = {
-      protocol: 'https:',
       hostname: this.apiUrl,
       method: 'POST',
       path: `?access_token=${this.token}`,
