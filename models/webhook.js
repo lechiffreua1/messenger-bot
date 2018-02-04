@@ -9,6 +9,7 @@ class Webhook extends EE {
 
     this.token = options.token
     this.apiUrl = options.apiUrl
+    this.apiPath = options.apiPath
   }
 
   handleGet (req, res, next) {
@@ -59,7 +60,7 @@ class Webhook extends EE {
     const options = {
       hostname: this.apiUrl,
       method: 'POST',
-      path: `?access_token=${this.token}`,
+      path: `${this.apiPath}${this.token}`,
       headers: {
         'Content-Type': 'application/json'
       }
