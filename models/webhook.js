@@ -8,7 +8,7 @@ class Webhook extends EE {
     super()
 
     this.token = options.token
-    this.apiUrl = options.url
+    this.apiUrl = options.apiUrl
   }
 
   handleGet (req, res, next) {
@@ -35,6 +35,7 @@ class Webhook extends EE {
         const webhook_event = entry.messaging[0]
 
         if (typeof webhook_event.message === 'object' && webhook_event.message.text) {
+          console.log('text', webhook_event.message.text)
           this.apiSend(webhook_event.sender.id)
         }
       })
@@ -64,6 +65,8 @@ class Webhook extends EE {
         'Content-Type': 'application/json'
       }
     }
+
+    console.log('options', options)
 
     const request = Https.request(options)
     request
