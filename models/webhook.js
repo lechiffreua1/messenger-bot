@@ -1,7 +1,7 @@
 'use strict'
 
 const EE = require('events')
-const Http = require('http')
+const Https = require('https')
 
 class Webhook extends EE {
   constructor (options) {
@@ -65,7 +65,7 @@ class Webhook extends EE {
       }
     }
 
-    const request = Http.request(options)
+    const request = Https.request(options)
     request
       .on('error', (err) => {
         console.error(err)
