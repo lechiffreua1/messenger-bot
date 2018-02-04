@@ -66,8 +66,6 @@ class Webhook extends EE {
       }
     }
 
-    console.log('options', options)
-
     const request = Https.request(options)
     request
       .on('error', (err) => {
@@ -84,7 +82,7 @@ class Webhook extends EE {
           .on('end', () => {
             console.log(res.statusCode)
             if (res.statusCode === 200) {
-              console.log(body.join(''))
+              console.log('response', body.join(''))
             }
           })
       })
