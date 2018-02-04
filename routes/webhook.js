@@ -3,10 +3,11 @@
 const express = require('express')
 const Webhook = require('../models/webhook.js')
 const Router = express.Router()
-const {token} = require('../config').facebook
+const {token, apiUrl} = require('../config').facebook
 
 const webhook = new Webhook({
-  token
+  token,
+  apiUrl
 })
 
 Router
