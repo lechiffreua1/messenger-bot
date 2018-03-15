@@ -6,6 +6,6 @@
   "facebook": {
     "apiUrl": "graph.facebook.com",
     "apiPath": "/v2.6/me/messages?access_token=",
-    "token": "EAAXf0Pil53gBAMjSyx0Vk2AQMC4GsKFHqS5FHDONqvLQIAp3JqCVjhHeOwdOE3v2SqS7fWqDGZBDkKd0CZCZAOMHH2pndM0iaWfoxWodQ7X4rzN4rb30hJQtKdnSdjKXrAb5CvxZAj8KW9FDu8eO5ncrGAVSOOZA0xLoVCzyMfwZDZD"
+    "token": "messenger_bot_testing"
   }
 }

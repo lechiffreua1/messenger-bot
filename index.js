@@ -1,11 +1,17 @@
 'use strict'
 
-const Http = require('http')
+const https = require('https')
+const fs = require('fs')
 const app = require('./app.js')
 const {server} = require('./config')
 const port = process.env.PORT || server.port
 
-const httpServer = Http.createServer(app)
+const options = {
+  key: fs.readFileSync('lib/ssl/key.pem'),
+  cert: fs.readFileSync('lib/ssl/cert.pem')
+};
+
+const httpServer = https.createServer(options, app)
 httpServer
   .on('error', (err) => {
     console.error(err)
